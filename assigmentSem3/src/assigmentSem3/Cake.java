@@ -10,13 +10,20 @@ package assigmentSem3;
 * Class :
 */
 import java.lang.*;
+import java.text.NumberFormat;
+
 	public class Cake
 	{
+	
+	
 	  private String custID; //D001, P003
 	  private String cakeType; //D24 Chocolate Cake,Red Velvet,Burnt Cheese Cake,Black Forest
 	  private int qty;
 	  private double price;
+
+	  NumberFormat formatter = NumberFormat.getCurrencyInstance(); // Using NumberFormat class to get the money format
 	  
+
 	  public Cake(String ID,String cakeType, int qty)
 	  {    this.custID=ID;
 	       this.cakeType=cakeType;
@@ -61,15 +68,17 @@ import java.lang.*;
 		  
 	  }
 	  
+	  
+	  
+	  
 	   
 	  //2.c)Write the toString method that will return the output look like as below:
 	  //Customer ID:XXXX	Cake Type:XXXXXXX	        Price: RM XX.XX	     Quantity:XX
 	  
-	  public String toString() {
-		  
-		  return "Customer ID: " + this.custID + String.format("\tCake Type : %-15s", this.cakeType)+ 
-				  "\tPrice: RM " + this.price +
-				  "\tQuantity: " + this.qty;
+	  public String toString() { 
+		                                        //Using String format with flag left align and width 15 with conversion s String
+		  return "Customer ID: " + this.custID + String.format("\tCake Type : %-15s", this.cakeType)
+				  +  "\tPrice: RM " + formatter.format(this.price) + "\tQuantity: " + this.qty;
 				  
 	  }
  
