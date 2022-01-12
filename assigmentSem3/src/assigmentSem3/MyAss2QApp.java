@@ -85,18 +85,19 @@ public class MyAss2QApp {
             	cakeQ.enqueue(cake);
             	
             }
-            
+
 
             //f)Display the total quantity order for each cake type and display the cake name of the highest total order
             
              int countRed = 0,countD24 = 0,countBurnt = 0, countBF = 0;
           
+
              
              
              while(cakeQ.isEmpty() != true) {
             	 
             	 cake = cakeQ.dequeue();
-            	 
+
             		String caketype = cake.getCakeType();  //assign cakeType to caketype variable
 
 
@@ -125,10 +126,12 @@ public class MyAss2QApp {
          }	 
              
              
+
              System.out.println("\nTotal quantity of D24 Chocolate Cake : " + countD24);
              System.out.println("Total quantity of Red Velvet : " + countRed);
              System.out.println("Total quantity of Burnt Cheese Cake : " + countBurnt);
              System.out.println("Total quantity of Black Forest : " + countBF);
+
              
              
              //Find Highest
@@ -153,6 +156,7 @@ public class MyAss2QApp {
             	 System.out.println("\nHighest value is " + high + "for Black Forest");
              }
              
+
 
             
             //g)Display the receipt that will display the custID, cakeType, price(using detPrice() method), qty, 
