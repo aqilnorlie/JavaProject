@@ -10,6 +10,7 @@ package assigmentSem3;
 * Class :
 */
 import java.lang.*;
+
 	public class Cake
 	{
 	  private String custID; //D001, P003
@@ -22,6 +23,9 @@ import java.lang.*;
 	       this.cakeType=cakeType;
 	       this.qty=qty;
 	  }
+	  
+	  
+	
 	  
 	  public void setID(String ID){this.custID=ID;}
 	  public void setCakeType(String cakeType){this.cakeType=cakeType;}
@@ -65,13 +69,11 @@ import java.lang.*;
 	  //2.c)Write the toString method that will return the output look like as below:
 	  //Customer ID:XXXX	Cake Type:XXXXXXX	        Price: RM XX.XX	     Quantity:XX
 	  
-	  public String toString() {
-		  
-		  return "Customer ID: " + this.custID + String.format("\tCake Type : %-15s", this.cakeType)+ 
-				  "\tPrice: RM " + this.price +
-				  "\tQuantity: " + this.qty;
-				  
-	  }
- 
+	  public String toString() { 
+          									//Using String format with flag left align and width 15 with conversion s String
+				
+		  return "Customer ID: " + this.custID + String.format("\tCake Type : %-15s",this.cakeType) 
+		  + "\tPrice : RM " + String.format("%.2f",this.price) + "\tQuantity: " + this.qty; 
+}
      
 }
